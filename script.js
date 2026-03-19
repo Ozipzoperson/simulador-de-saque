@@ -10,14 +10,17 @@ function realizarSaque() {
 
      const valorasacar = Math.abs (Number($inputSaque.value))
 
-     if (isNaN (valorasacar) = valorasacar < 0) (
-         $displayMensagem. innertext = 'valor digitado é invalido'
+     if (isNaN (valorasacar) || valorasacar < 0) {
+         $displayMensagem. innerText = 'valor digitado é invalido'
+        return
 
-     if (valorasacar > saldo) 
+     if (valorasacar > saldo) {
         $displayMensagem. innerText = 'Não tem saldo'
         return
 
-)
+     }
+
+    }
 
     saldo = saldo - Number(valorasacar) .toFixed(2)
     $displaySaldo .innerText = saldo;
